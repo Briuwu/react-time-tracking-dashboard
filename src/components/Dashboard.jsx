@@ -18,7 +18,7 @@ const Dashboard = () => {
       <div className="profile">
         <div className="profile__desc">
           <div className='profile__desc-profile'><img src={Profile} alt="" /></div>
-          <p className="profile__desc-report"><span>Report for <br /></span>Jeremy Robson</p>
+          <h1 className="profile__desc-report"><span>Report for <br /></span>Jeremy Robson</h1>
         </div>
         <div className="profile__btn">
           <button className={activeBtn === "Daily" ? "active" : ""} onClick={(e) => handleBtn(e)}>Daily</button>
