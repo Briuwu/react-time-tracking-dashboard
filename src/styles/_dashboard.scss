@@ -1,0 +1,76 @@
+.App {
+  max-width: 1440px;
+}
+
+.dashboard {
+  display: grid;
+  gap: 1em;
+}
+
+.cards {
+  display: grid;
+  gap: 1em;
+}
+
+@media (min-width: 700px) {
+  .cards {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+@media (min-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(3, 250px);
+  }
+
+  .dashboard {
+    grid-template-columns: max-content max-content;
+  }
+
+  .profile {
+    grid-column: 1;
+
+    &__btn {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1em;
+      padding: 1em 1.5em;
+    }
+
+    &__desc {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-right: 0;
+      padding-bottom: 5em;
+
+      &-report {
+        font-size: 30px;
+        max-width: 40%;
+
+        span {
+          font-size: $fz;
+        }
+      }
+    }
+  }
+
+  .card {
+    display: flex;
+    
+    &-desc {
+      grid-template-rows: 1fr max-content max-content;
+      width: 100%;
+      
+    }
+
+    &-current {
+      font-size: 46px;
+      grid-row: 2 / 2;
+    }
+
+    &-previous {
+      grid-row: 3 / 3;
+      text-align: left;
+    }
+  }
+}

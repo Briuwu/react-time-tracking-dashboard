@@ -1,0 +1,127 @@
+button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.profile {
+  background-color: $dark-blue;
+  color: $pale-blue;
+  font-size: $fz;
+
+  border-radius: 1em;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2em;
+
+    padding: 1.5em;
+  }
+
+  &__desc {
+    border-radius: 1em;
+
+    background-color: $blue;
+    padding: 1.5em;
+
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+
+    &-report {
+      font-size: 24px;
+      font-weight: 300;
+      color: white;
+
+      span {
+        font-size: 14px;
+        color: $pale-blue;
+      }
+    }
+
+    &-profile {
+      width: 4em;
+
+      outline: 2px solid white;
+      border-radius: 50%;
+    }
+  }
+}
+
+.card {
+  font-size: $fz;
+  color: $pale-blue;
+  border-radius: 1em;
+  font-weight: 300;
+  padding-top: 2em;
+
+  position: relative;
+  overflow: hidden;
+
+  &-desc {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    align-items: center;
+    gap: 0.5em;
+    cursor: pointer;
+
+    background-color: $dark-blue;
+    border-radius: 1em;
+    padding: 1.5em;
+
+    position: relative;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &-logo {
+    position: absolute;
+    top: -10px;
+    right: 16px;
+  }
+
+  &-name {
+    font-weight: normal;
+    color: white;
+  }
+
+  &-ellipsis {
+    text-align: right;
+  }
+
+  &-current {
+    font-size: 26px;
+    color: white;
+  }
+
+  &-previous {
+    text-align: right;
+  }
+}
+
+.card.Work {
+  background-color: $work;
+}
+.card.Play {
+  background-color: $play;
+}
+.card.Study {
+  background-color: $study;
+}
+.card.Exercise {
+  background-color: $exercise;
+}
+.card.Social {
+  background-color: $social;
+}
+.card.Self.Care {
+  background-color: $self-care
+}

@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+body {
+  font-family: 'Rubik', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1em;
+  background-color: #0f1424;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:hover {
+  color: white;
+}
+
+.profile {
+  background-color: #1c1f4a;
+  color: #bdc1ff;
+  font-size: 18px;
+  border-radius: 1em;
+}
+
+.profile__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 2em;
+  padding: 1.5em;
+}
+
+.profile__desc {
+  border-radius: 1em;
+  background-color: #5847eb;
+  padding: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5em;
+}
+
+.profile__desc-report {
+  font-size: 24px;
+  font-weight: 300;
+  color: white;
+}
+
+.profile__desc-report span {
+  font-size: 14px;
+  color: #bdc1ff;
+}
+
+.profile__desc-profile {
+  width: 4em;
+  outline: 2px solid white;
+  border-radius: 50%;
+}
+
+.card {
+  font-size: 18px;
+  color: #bdc1ff;
+  border-radius: 1em;
+  font-weight: 300;
+  padding-top: 2em;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-desc {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr max-content;
+      grid-template-columns: 1fr -webkit-max-content;
+      grid-template-columns: 1fr max-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5em;
+  cursor: pointer;
+  background-color: #1c1f4a;
+  border-radius: 1em;
+  padding: 1.5em;
+  position: relative;
+}
+
+.card-desc:hover {
+  opacity: 0.8;
+}
+
+.card-logo {
+  position: absolute;
+  top: -10px;
+  right: 16px;
+}
+
+.card-name {
+  font-weight: normal;
+  color: white;
+}
+
+.card-ellipsis {
+  text-align: right;
+}
+
+.card-current {
+  font-size: 26px;
+  color: white;
+}
+
+.card-previous {
+  text-align: right;
+}
+
+.card.Work {
+  background-color: #ff8c66;
+}
+
+.card.Play {
+  background-color: #56c2e6;
+}
+
+.card.Study {
+  background-color: #ff5c7c;
+}
+
+.card.Exercise {
+  background-color: #4acf81;
+}
+
+.card.Social {
+  background-color: #7536d3;
+}
+
+.card.Self.Care {
+  background-color: #f1c65b;
+}
+
+.App {
+  max-width: 1440px;
+}
+
+.dashboard {
+  display: -ms-grid;
+  display: grid;
+  gap: 1em;
+}
+
+.cards {
+  display: -ms-grid;
+  display: grid;
+  gap: 1em;
+}
+
+@media (min-width: 700px) {
+  .cards {
+    -ms-grid-columns: (300px)[2];
+        grid-template-columns: repeat(2, 300px);
+  }
+}
+
+@media (min-width: 900px) {
+  .cards {
+    -ms-grid-columns: (250px)[3];
+        grid-template-columns: repeat(3, 250px);
+  }
+  .dashboard {
+    -ms-grid-columns: max-content max-content;
+        grid-template-columns: -webkit-max-content -webkit-max-content;
+        grid-template-columns: max-content max-content;
+  }
+  .profile {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .profile__btn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 1em;
+    padding: 1em 1.5em;
+  }
+  .profile__desc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-right: 0;
+    padding-bottom: 5em;
+  }
+  .profile__desc-report {
+    font-size: 30px;
+    max-width: 40%;
+  }
+  .profile__desc-report span {
+    font-size: 18px;
+  }
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .card-desc {
+    -ms-grid-rows: 1fr max-content max-content;
+        grid-template-rows: 1fr -webkit-max-content -webkit-max-content;
+        grid-template-rows: 1fr max-content max-content;
+    width: 100%;
+  }
+  .card-current {
+    font-size: 46px;
+    -ms-grid-row: 2;
+    grid-row: 2 / 2;
+  }
+  .card-previous {
+    -ms-grid-row: 3;
+    grid-row: 3 / 3;
+    text-align: left;
+  }
+}
+/*# sourceMappingURL=style.css.map */
