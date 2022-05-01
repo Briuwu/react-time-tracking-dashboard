@@ -9,18 +9,17 @@ import {ReactComponent as Social} from './images/icon-social.svg'
 import {ReactComponent as SelfCare} from './images/icon-self-care.svg'
 import {ReactComponent as Ellipsis} from './images/icon-ellipsis.svg'
 
+const logos = [
+  <Work />,
+  <Play />,
+  <Study />,
+  <Exercise />,
+  <Social />,
+  <SelfCare />
+]
 
 const Card = ({time}) => {
   const [data] = useState(dataJSON)
-
-  const logos = [
-    <Work />,
-    <Play />,
-    <Study />,
-    <Exercise />,
-    <Social />,
-    <SelfCare />
-  ]
   
   return (
     <div className="cards">

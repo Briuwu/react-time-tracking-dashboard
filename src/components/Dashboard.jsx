@@ -4,12 +4,10 @@ import Profile from './images/image-jeremy.png'
 
 const Dashboard = () => {
   const [btn, setBtn] = useState("Weekly")
-  const [activeBtn, setActiveBtn] = useState("Weekly")
 
   const handleBtn = (e) => {
     const text = e.target.innerText
     setBtn(text)
-    setActiveBtn(text)
   }
 
   return (
@@ -21,9 +19,9 @@ const Dashboard = () => {
           <h1 className="profile__desc-report"><span>Report for <br /></span>Jeremy Robson</h1>
         </div>
         <div className="profile__btn">
-          <button className={activeBtn === "Daily" ? "active" : ""} onClick={(e) => handleBtn(e)}>Daily</button>
-          <button className={activeBtn === "Weekly" ? "active" : ""} onClick={(e) => handleBtn(e)}>Weekly</button>
-          <button className={activeBtn === "Monthly" ? "active" : ""} onClick={(e) => handleBtn(e)}>Monthly</button>
+          <button className={btn === "Daily" ? "active" : ""} onClick={handleBtn}>Daily</button>
+          <button className={btn === "Weekly" ? "active" : ""} onClick={handleBtn}>Weekly</button>
+          <button className={btn === "Monthly" ? "active" : ""} onClick={handleBtn}>Monthly</button>
         </div>
       </div>
       {/* CARDS */}
