@@ -6,6 +6,10 @@ button {
   &:hover {
     color: white;
   }
+
+  &.active {
+    color: white;
+  }
 }
 
 .profile {

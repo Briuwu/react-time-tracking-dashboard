@@ -102,6 +102,10 @@ button:hover {
   color: white;
 }
 
+button.active {
+  color: white;
+}
+
 .profile {
   background-color: #1c1f4a;
   color: #bdc1ff;
